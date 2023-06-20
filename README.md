@@ -51,9 +51,5 @@ python train.py --img 640 --batch 16 --epochs 10 --data ../dataset.yaml --weight
 python detect.py --weights [path-to-model] --source [path-to-file] 
 ```
 
-| Input Image | Result Image |
-| --- | --- |
-| ![infer](./assets/infer.jpg "infer") | ![result](./assets/result.jpg "result") |
-
 ## Reference 
 - [YOLOv5](https://github.com/ultralytics/yolov5)
