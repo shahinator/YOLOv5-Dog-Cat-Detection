@@ -45,11 +45,6 @@ The model was trained with 10 epochs and standard COCO128 configuration (batch-s
 ```bash
 python train.py --img 640 --batch 16 --epochs 10 --data ../dataset.yaml --weights yolov5s.pt --device 0
 ```
-Training results on valid set: 
-![result](./assets/training_result.jpg "result")
-Metrics:
-![conf](./assets/confusion_matrix.png "conf")
-
 ## Inference with `detect.py`
 `detect.py` runs inference on a variety of sources.
 ```bash
