@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+  <g id="plus" transform="translate(-7 -6.65)">
+    <line id="Line_1" data-name="Line 1" y2="12" transform="translate(13 6.65)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+    <line id="Line_2" data-name="Line 2" x2="12" transform="translate(7 12.65)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

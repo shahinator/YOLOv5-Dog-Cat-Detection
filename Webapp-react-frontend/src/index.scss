@@ -1,0 +1,235 @@
+// 3rd-party Plugins
+@import "~highlight.js/styles/googlecode.css";
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+
+// Theme Styles
+@import "./_metronic/_assets/sass/style.react.scss";
+
+// Default Layout themes
+@import "./_metronic/_assets/sass/themes/layout/header/base/light.scss";
+@import "./_metronic/_assets/sass/themes/layout/header/menu/light.scss";
+@import "./_metronic/_assets/sass/themes/layout/brand/dark.scss";
+@import "./_metronic/_assets/sass/themes/layout/aside/dark.scss";
+@import url("https://cdn.syncfusion.com/ej2/material.css");
+
+// Header themes
+// Light
+//@import "./_metronic/_assets/sass/themes/layout/header/base/light.scss";
+// Dark
+// @import "./_metronic/_assets/sass/themes/layout/header/base/dark.scss";
+
+// Header Menu themes
+// Light
+//@import "./_metronic/_assets/sass/themes/layout/header/menu/light.scss";
+// Dark
+// @import "./_metronic/_assets/sass/themes/layout/header/menu/dark.scss";
+
+// Brand themes
+.brand-dark {
+  @import "./_metronic/_assets/sass/themes/layout/brand/dark.scss";
+}
+// Light
+.brand-light {
+  @import "./_metronic/_assets/sass/themes/layout/brand/light.scss";
+}
+.alert-msg{
+  background-color: #EEF0F8;
+}
+// Aside themes
+// Dark
+//@import "./_metronic/_assets/sass/themes/layout/aside/dark.scss";
+// Light
+// @import "./_metronic/_assets/sass/themes/layout/aside/light.scss";
+
+// .example-highlight {
+//   padding: 0rem 1.5rem 1.75rem !important;
+// }
+.bolds{
+  font-weight: bold;
+  padding-right: 20px;
+}
+.flelxcenter{
+  display: flex;
+  align-items: baseline;
+}
+.example-highlight > pre {
+  background: none transparent !important;
+  margin: 0 !important;
+  padding-top: 0.5rem;
+  code {
+    overflow-y: auto;
+    display: block;
+
+    span {
+      background: none transparent !important;
+    }
+  }
+}
+
+.json > pre {
+  background: none #fff !important;
+}
+
+.example-code > .json {
+  background: none #fff !important;
+}
+
+.symbol.symbol-45 > svg {
+  width: 100%;
+  max-width: 45px;
+  height: 45px;
+}
+
+.react-bootstrap-table {
+  overflow-x: auto;
+}
+
+.react-bootstrap-table {
+  th {
+    outline: none;
+
+    &.sortable {
+      .svg-icon-sort {
+        opacity: 0;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        .svg-icon-sort {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .table.table-head-custom thead tr {
+    .sortable-active {
+      color: $primary !important;
+    }
+  }
+}
+
+.cursor-default {
+  cursor: default !important;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  // width:2px;
+  border-radius: 10px;
+  background: #c1c1c1;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #c1c1c1;
+}
+.btn.btn-success {
+  background-color: #cc0001 !important;
+  border-color: #cc0001 !important;
+}
+.widthfixed {
+  button {
+    width: 100px !important;
+  }
+}
+.titles {
+  font-weight: 800 !important;
+  font-size: 18px !important;
+}
+img.cmsImage {
+  height: 400px !important;
+  width: 400px !important;
+  object-fit: cover !important;
+}
+.cms-des {
+  font-size: 14px !important;
+}
+.symbol .symbol-label {
+  width: max-content !important;
+  padding: 10px 20px !important;
+}
+.star-color {
+  color: #cc0001 !important;
+}
+.btn-login {
+  background-color: #cc0001 !important;
+  height: 40px !important;
+  line-height: 10px !important;
+  border-color: #cc0001 !important;
+}
+.mr-3 {
+  margin-right: 20px !important;
+}
+
+.questionCircle {
+  background: $primary;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #cc0001;
+  color: $white;
+  line-height: 40px;
+  text-align: center;
+}
+.flexs {
+  display: flex;
+  align-items: center;
+}
+.questionGrid {
+  display: grid;
+  margin: 1rem 0 0 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  .questionGridItems {
+    padding: 16px;
+    position: relative;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+}
+.padding10 {
+  padding: 10px 0;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
+.centeralign{
+  justify-content: center;
+}
+.centerAlign{
+  text-align: center;
+}
+
+.questionGridNew {
+  display: grid;
+  grid-template-columns: minmax(0 , 1fr);
+  gap: 30px;
+  .questionGridItems {
+    border: 1px solid #d0d0d0;
+    padding: 15px;
+    border-radius: 4px;
+
+    p {
+      font-size: 18px;
+      color: #323232;
+      margin: 0;
+    }
+  }
+}

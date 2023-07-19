@@ -1,6 +1,0 @@
-
-train: ../dataset/train/images
-val: ../dataset/valid/images
-
-nc: 2
-names: ['Cat', 'Dog']

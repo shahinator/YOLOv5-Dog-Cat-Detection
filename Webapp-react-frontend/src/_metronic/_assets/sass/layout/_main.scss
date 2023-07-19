@@ -1,0 +1,467 @@
+//
+// Base
+//
+
+// Body
+body {
+  background: $page-bg;
+}
+
+// Desktop Mode
+@include media-breakpoint-up(lg) {
+  // Wrapper
+  .wrapper {
+    // Fixed Header
+    .header-fixed & {
+      padding-top: get($header-config, desktop, fixed, height);
+    }
+
+    // Fixed Content Head
+    .header-fixed.subheader-fixed.subheader-enabled & {
+      padding-top: get($header-config, desktop, fixed, height) +
+        get($subheader-config, fixed, height);
+    }
+
+    // Fixed Aside
+    .aside-fixed & {
+      padding-left: get($aside-config, base, width);
+    }
+
+    // Minimize Aside
+    .aside-fixed.aside-minimize:not(.aside-minimize-hover) & {
+      padding-left: get($aside-config, base, minimized-width);
+    }
+  }
+
+  // Container
+  .container,
+  .container-fluid {
+    padding: 0 get($page-padding, desktop);
+    max-width: 100% !important;
+  }
+}
+
+// Tablet & Mobile Modes
+@include media-breakpoint-down(md) {
+  // Wrapper
+  .wrapper {
+    // Fixed Header
+    .header-mobile-fixed & {
+      padding-top: get($header-config, tablet-and-mobile, fixed, height);
+    }
+
+    // Fixed Subheader
+    .header-mobile-fixed.subheader-mobile-fixed.subheader-enabled & {
+      padding-top: get($header-config, tablet-and-mobile, fixed, height) +
+        get($subheader-config, fixed, height-mobile);
+    }
+  }
+
+  // Container
+  .container,
+  .container-fluid {
+    max-width: none;
+    padding: 0 get($page-padding, tablet-and-mobile);
+  }
+}
+
+.active-button-style {
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 2px;
+  color: #323232;
+}
+
+.disactive-button-style {
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #de5e5e;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.cus-modal-box {
+  width: 870px;
+  background-color: #fff;
+  // padding: 30px;
+  box-shadow: 0px 0px 30px rgba(209, 217, 230, 0.5);
+  border-radius: 10px;
+  .cus-modal-body {
+    .text-grid {
+      display: grid;
+      padding: 0 30px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px 20px;
+      justify-content: space-between;
+      .text-grid-items {
+        p {
+          color: #193566;
+          opacity: 0.5;
+          font-size: 12px;
+          line-height: 22px;
+          margin: 0;
+        }
+        span {
+          display: block;
+          font-size: 14px;
+          color: #323232;
+        }
+      }
+    }
+  }
+  .license-details,
+  .modal-bottom-align {
+    padding-top: 30px;
+  }
+  .cus-modal-header,
+  .license-details {
+    padding-bottom: 30px;
+    p {
+      margin: 0;
+      font-size: 22px;
+      padding: 0 30px;
+      color: #050505;
+      line-height: 30px;
+    }
+  }
+}
+.inventroy-data-text {
+  p {
+    margin: 0;
+    font-size: 22px;
+    color: #050505;
+    line-height: 30px;
+  }
+}
+
+.cus-modal-center-align {
+  display: flex;
+  justify-content: center;
+}
+
+.all-alignment-content {
+  padding: 0 5rem;
+}
+
+.sub-header-style {
+  padding: 30px 0 40px 0;
+  p {
+    margin: 0;
+    font-size: 22px;
+    padding: 0 30px;
+    color: #050505;
+    line-height: 30px;
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 30px;
+  justify-content: space-between;
+  .gallery-grid-items {
+    img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+  }
+}
+
+.MuiDialog-root {
+  z-index: 999 !important;
+}
+
+.honda-logo-center-alignment-page {
+  height: calc(100vh - 249px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 320px;
+  }
+}
+
+.honda-text-grid12 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px 30px;
+  img.images {
+    height: 400px !important;
+    width: 400px !important;
+  }
+  video {
+    width: 400px !important;
+    height: 400px !important;
+  }
+  img {
+    height: 400px !important;
+    width: 400px !important;
+  }
+}
+.close {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #757575;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+.positionrelative {
+  position: relative;
+  margin-bottom: 20px;
+  img{
+	  height: 400px;
+	  width: 100%;
+  }
+}
+.honda-container {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto;
+  .honda-text-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 30px;
+  }
+  span {
+    font-size: 16px;
+    color: #757575;
+    display: block;
+    padding-bottom: 2px;
+  }
+  p {
+    font-size: 14px;
+    color: #323232;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin: 0;
+  }
+}
+
+.cus-data-input-style {
+  span {
+    a {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+  input {
+    height: 44.5px;
+    padding: 0.825rem 1.42rem;
+    font-size: 1.08rem;
+    border: none;
+    border: 1px solid #c4c4c4;
+    background-color: #f3f6f9;
+  }
+}
+
+.check-new-design {
+  padding: 0 12.5px;
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+  label {
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+  }
+}
+
+button {
+  white-space: nowrap;
+}
+.btn {
+  // height: 40px !important;
+  white-space: nowrap !important;
+}
+
+.take-test-box {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 40px 0 #0000001a;
+  border: 1px solid #d0d0d0;
+  padding: 30px;
+}
+
+.take-test-box-center-alignment {
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox-design-change {
+  display: flex;
+  align-items: center;
+  padding: 0 0 10px 0;
+
+  input[type="checkbox"] {
+    width: 18px;
+    margin: 0;
+    padding: 0;
+    height: 18px;
+  }
+  div {
+    display: flex;
+    align-items: center;
+  }
+  div:last-child {
+    padding-left: 8px;
+    span {
+      font-size: 16px;
+      color: #232323;
+      font-weight: 400;
+      display: block;
+    }
+  }
+}
+
+.other-information-child-text-style > {
+  h2 {
+    font-size: 30px;
+    color: #050505;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+
+.other-information-child-text-style {
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  margin: 60px 0;
+}
+
+.other-information-child-text-style1 > {
+  h2 {
+    font-size: 30px;
+    color: #050505;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+
+.other-information-child-text-style1 {
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  margin: 20px 0 40px 0;
+}
+
+.honda-text-grid-new {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 20px;
+  justify-content: space-between;
+  .honda-text-grid-new-items {
+    span {
+      font-size: 16px;
+      color: #757575;
+      display: block;
+      padding: 0 0 20px 0;
+    }
+    .card-main-border-image {
+      border: 1px solid #d0d0d0;
+      padding: 10px;
+      img {
+        width: 100%;
+        height: 250px;
+      }
+    }
+  }
+}
+
+.honda-text-grid-border {
+  border: 1px solid #d0d0d0;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.honda-text-grid1232 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  .honda-text-grid1232-items {
+    span {
+      font-size: 16px;
+      color: #757575;
+      display: block;
+      padding: 0 0 20px 0;
+    }
+    .card-main-border-image {
+      border: 1px solid #d0d0d0;
+      padding: 10px;
+      img {
+        width: 100%;
+        height: 250px;
+      }
+    }
+  }
+}
+
+.take-test-height-qus {
+  height: calc(100vh - 139px);
+}
+
+.take-test-all-button-alignment {
+  button {
+    padding: 10px 20px;
+  }
+}
+
+.questionGrid12121 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  font-size: 18px;
+  justify-content: space-between;
+  .questionGridItems {
+    p {
+      font-size: 22px;
+    }
+    border: 1px solid #d0d0d0;
+    padding: 15px;
+    border-radius: 4px;
+    img {
+      margin: 20px 0;
+      width: 300px;
+      height: 160px;
+
+      border-radius: 4px;
+    }
+  }
+}
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  font-size: 18px;
+  justify-content: space-between;
+  .questionGridItems {
+    p {
+      font-size: 22px;
+    }
+    border: 1px solid #d0d0d0;
+    padding: 15px;
+    border-radius: 4px;
+    img {
+      margin: 20px 0;
+      width: 300px;
+      height: 160px;
+
+      border-radius: 4px;
+    }
+  }
+}
+
+.button-height > button {
+  min-width: 90px;
+}
