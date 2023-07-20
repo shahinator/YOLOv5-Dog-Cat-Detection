@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mqttreceiver-deployment
+  labels:
+    app: mqttreceiver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mqttreceiver
+  template:
+    metadata:
+      labels:
+        app: mqttreceiver
+    spec:
+      containers:
+      - name: mqttreceiver
+        image: jpmoradiya/mqttreceiverimage:latest
+        imagePullPolicy: IfNotPresent
