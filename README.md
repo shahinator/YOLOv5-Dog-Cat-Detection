@@ -1,12 +1,13 @@
 # Using YOLOv5 Dog Cat Detection
 ## Webapp-react-frontend
-Webapp-react-frontend is the Frontend Folder and all Frontend view to display here. Using React Js which is most popular JavaScript Fetaures in the modern technologies.
-
+Webapp-react-frontend is the Frontend Folder and all Frontend view is to display here. Using React Js which is the most popular JavaScript Features in modern technologies.
+## Project Demonstration URL: https://www.youtube.com/watch?v=Kh7v_Fxyn98
+Clusters_prepration is to prepare an image dataset for Pet like cat-dog detection.
 ## Clusters_prepration
-Clusters_prepration is prepare image dataset for Pet like cat-dog detection.
+Clusters_prepration is to prepare an image dataset for Pet like cat-dog detection.
 
 ## docker_image-main
-Docker_image-main is rendering image as like as sockets, there os no need to refresh page again and again automatic disploying image.
+Docker_image-main is rendering images as sockets, there is no need to refresh the page again and again automatically displaying an image.
 
 
 ## To perform dog and cat detection using YOLOv5, you can follow these steps:
@@ -35,7 +36,7 @@ pip install -r requirements.txt
 
 ## Data
 - Data used for this project can be found [here.](https://www.kaggle.com/datasets/andrewmvd/dog-and-cat-detection)
-- Dataset creation: Refer to [YOLOv5 Train Custom Data](https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data) for more information. In short, labels and bouding boxes were converted in to .txt format as follow: 
+- Dataset creation: Refer to [YOLOv5 Train Custom Data](https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data) for more information. In short, labels and bounding boxes were converted into .txt format as follows: 
     `class x_center y_center width height`
 - Data config for training: Standard YOLOv5 YAML format. Refer to [`dataset.yaml`](dataset.yaml) for details.
 ```yaml
@@ -50,7 +51,7 @@ names:
   1: dog
 ``` 
 ## Training
-The model was trained with 10 epochs and standard COCO128 configuration (batch-size, image size and pretrained `--weights yolov5s.pt`)
+The model was trained with 10 epochs and standard COCO128 configuration (batch-size, image size and pre trained `--weights yolov5s.pt`)
 ```bash
 python train.py --img 640 --batch 16 --epochs 10 --data ../dataset.yaml --weights yolov5s.pt --device 0
 ```
